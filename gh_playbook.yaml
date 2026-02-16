@@ -1,0 +1,9 @@
+---
+ - name: gh installation on linux server/localhost
+   hosts: localhost
+   become: yes
+   tasks:
+     - name: gh installation
+       apt:
+         name: gh
+         state: present

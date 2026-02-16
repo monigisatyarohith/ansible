@@ -1,0 +1,10 @@
+---
+ - name: deletion of a playbook
+   hosts: all
+   become: yes
+   tasks:
+    - name: deletion/removing of users that are existing
+      user:
+       name: rohith
+       state: absent #it removes user only but not home directory to remove home directory use the below command
+       remove: yes # if we does not specify it then it deletes only user but not home directory

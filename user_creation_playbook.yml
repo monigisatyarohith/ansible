@@ -1,0 +1,14 @@
+---
+ - name: users creation on ec2 instances
+   hosts: all
+   become: yes
+   tasks:
+     - name: usercreation using ansible
+       user:
+         name: rohith
+         groups: sudo # it permits sudo permissions
+         append: yes
+         create_home: yes #it creates a home directory for the user
+         shell: /bin/bash # it specifies the basic shell for users
+         state: present # it actually creates a user
+ 
