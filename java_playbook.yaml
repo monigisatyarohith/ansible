@@ -1,0 +1,9 @@
+---
+ - name: java installation
+   hosts: all
+   become: yes
+   tasks:
+      - name: installation of java in all servers
+        apt:
+          name: openjdk-17-jdk
+          state: present

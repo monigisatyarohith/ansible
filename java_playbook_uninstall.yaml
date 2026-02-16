@@ -1,0 +1,9 @@
+---
+ - name: uninstallation of java
+   hosts: all
+   become: yes
+   tasks:
+    - name: uninstallation of java
+      apt:
+        name: openjdk-17-*
+        state: absent
