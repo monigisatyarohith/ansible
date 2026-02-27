@@ -1,0 +1,8 @@
+---
+ - name: creation of ec2 instance in ansible
+   hosts: localhost
+   gather_facts: no
+   become: yes
+   tasks:
+    - name: installation of ec2 instances in remote server
+      
